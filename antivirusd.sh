@@ -49,7 +49,7 @@ then
     continue 
 fi 
 scan
-cp directory-info.last directory-info.new
+cp directory-info.new directory-info.last #source--> destination 
 done
  
 
