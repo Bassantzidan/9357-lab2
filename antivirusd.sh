@@ -31,7 +31,7 @@ do
     fi
    done 
    fi
-   if [[ $flag = 1 ]]
+   if [[ $flag == 1 ]]
    then
        echo "$file is malicious and it is DELETED."
           cp "$file" "$malicious_dir"
@@ -39,6 +39,7 @@ do
     fi
 done
 }
+scan
 while true 
 do
 sleep "$interval_secs"
@@ -47,7 +48,9 @@ if cmp -s directory-info.last directory-info.new
 then 
     continue 
 fi 
-scan 
+scan
+cp directory-info.last directory-info.new
+done
  
 
 
