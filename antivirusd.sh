@@ -40,6 +40,10 @@ do
     fi
 done
 }
+if [[ -z "$(ls "$dir")" ]]
+then  
+    return  
+fi 
 scan
 while true 
 do
