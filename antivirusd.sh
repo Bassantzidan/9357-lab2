@@ -8,6 +8,10 @@ flagged_contents=("virus" "trojan" "malware" "worm" "ransomware")
 ls -l "$dir" > directory-info.last
 scan()
 {
+  if [[ -z "$(ls "$dir")" ]]
+then  
+    return  
+fi 
 for file in "$dir"/* #for every file in the directory  can be written as "$1"/*
 do 
   flag=0
@@ -40,10 +44,6 @@ do
     fi
 done
 }
-if [[ -z "$(ls "$dir")" ]]
-then  
-    return  
-fi 
 scan
 while true 
 do
