@@ -44,6 +44,7 @@ it works as follows :
   to install,write the following in terminal:
 
    sudo apt update
+   
    sudo apt install Bash
  
  - Make 
@@ -51,6 +52,7 @@ it works as follows :
   to install, write the following in terminal:
 
    sudo apt update
+
    sudo apt install make 
 
 ## HOW TO RUN 
