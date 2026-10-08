@@ -3,6 +3,7 @@
 ## Overview
 * antivirusd.sh -> this is a shell script which runs on a directory (dir) to check for one of the following : 
   1- flagged extensions 
+  
   2- flagged content
 
 it works as follows :
@@ -26,15 +27,20 @@ it works as follows :
   target 1: the bre-build step that creates  malicious_dir if it doesn't exist
 
   target 2: runs the antivirus script and depends on setup (target 1)
+
   target 3: runs the restore script and depends on setup (target 1)
 
 
 ## The folder hierarchy is as follows:
 
  9357-lab2/
+
   |--- antivirusd.sh
+  
   |--- restore.sh
+  
   |--- Makefile
+  
   |--- README.md
 
 ## prerequisites
@@ -44,7 +50,7 @@ it works as follows :
   to install,write the following in terminal:
 
    sudo apt update
-   
+
    sudo apt install Bash
  
  - Make 
