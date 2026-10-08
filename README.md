@@ -2,8 +2,9 @@
 
 ## Overview
 * antivirusd.sh -> this is a shell script which runs on a directory (dir) to check for one of the following : 
+
   1- flagged extensions 
-  
+
   2- flagged content
 
 it works as follows :
