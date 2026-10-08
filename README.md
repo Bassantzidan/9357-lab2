@@ -25,7 +25,7 @@ it works as follows :
 
 * Makefile-> has 3 targets in it , A target is basically a function call but can have dependencies , what are dependencies? it means "before performing this task , make this first "
 
-  target 1: the bre-build step that creates  malicious_dir if it doesn't exist
+  target 1: the Pre-build step that creates  malicious_dir if it doesn't exist
 
   target 2: runs the antivirus script and depends on setup (target 1)
 
@@ -52,7 +52,7 @@ it works as follows :
 
    sudo apt update
 
-   sudo apt install Bash
+   sudo apt install bash
  
  - Make 
 
@@ -89,5 +89,5 @@ it works as follows :
     
 
 ## flagged extensions and keywords 
-  flagged extensions and keywords are hardcoded in antivirusd.sh script lines 6 and 7 , they are put in an array to make it easier for looping for detection 
+  flagged extensions and keywords are hardcoded in antivirusd.sh script lines 6 and 7 , they are put in an array (flagged_extensions,flagged_contents) to make it easier for looping for detection 
 
