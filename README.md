@@ -39,27 +39,43 @@ it works as follows :
 
 ## prerequisites
  - ubuntu/linux environment
- - Bash 
+ - Bash
+
   to install,write the following in terminal:
+
    sudo apt update
    sudo apt install Bash
+ 
  - Make 
+
   to install, write the following in terminal:
+
    sudo apt update
    sudo apt install make 
 
 ## HOW TO RUN 
 * in terminal write (make antivirus)
+
+
    1-setup creates malicious_dir if needed
+
    2-antivirusd.sh starts monitoring dir
+
    3-it checks at the interval defined in the Makefile
+
    4-press Ctrl+c to stop 
 
  * in the terminal write (make restore)
+
+
     1-setup creates malicious_dir if needed
-    2-restore.sh checks if malicious_dir is empty it exits script 
-    3-if not empty, it prints numbered list with the file names 
+
+    2-restore.sh checks if malicious_dir is empty it exits script
+
+    3-if not empty, it prints numbered list with the file names
+
     4- a menu displayed with the options mentioned earlier 
+
     5-press Ctrl+c
     
 
