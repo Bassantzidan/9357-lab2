@@ -5,6 +5,7 @@ malicious_dir="$2"
 interval_secs="$3"
 flagged_extensions=(".exe" ".bat" ".vbs" ".scr" ".ps1")
 flagged_contents=("virus" "trojan" "malware" "worm" "ransomware")
+whitelist="whitelist"
 ls -l "$dir" > directory-info.last
 scan()
 {
@@ -15,8 +16,12 @@ fi
 for file in "$dir"/* #for every file in the directory  can be written as "$1"/*
 do 
   flag=0
+  if grep -q -x "$(basename "$file")" "$whitelist" #-x means whole line must match exactly 
+  then 
+      continue
+  fi 
    for flagged_extension in "${flagged_extensions[@]}"
-   do
+   do 
       if [[ "$file" == *"$flagged_extension" ]]
       then 
           flag=1

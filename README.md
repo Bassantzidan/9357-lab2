@@ -91,3 +91,6 @@ it works as follows :
 ## flagged extensions and keywords 
   flagged extensions and keywords are hardcoded in antivirusd.sh script lines 6 and 7 , they are put in an array (flagged_extensions,flagged_contents) to make it easier for looping for detection 
 
+## Whitelist 
+   whitelist idea is as follow , we create a file that has the name of all the files that were false positive or restored after detection and deletion so that when scanning again it checks that file first , if the file is in the whitelist then just skip it 
+   

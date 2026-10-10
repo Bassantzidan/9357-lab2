@@ -1,6 +1,7 @@
 #!/bin/bash
 dir="$1"
 malicious_dir="$2"
+whitelist="whitelist"
 if [[ -z "$(ls "$malicious_dir")" ]]
 then
     echo "No malicious files to review."
@@ -28,6 +29,7 @@ if [[ $action == 1 ]]
 then 
     mv "$selected_file" "$dir"
     echo "Restored $(basename "$selected_file") to $(basename "$dir")."
+    echo "$(basename "$selected_file")" >> "$whitelist"
 fi 
 if [[ $action == 2 ]]
 then 
