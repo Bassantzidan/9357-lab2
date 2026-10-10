@@ -1,4 +1,5 @@
 #!/bin/bash
+sleep 23 
 dir="$1"
 malicious_dir="$2"
 flagged_extensions=(".exe" ".bat" ".vbs" ".scr" ".ps1")
