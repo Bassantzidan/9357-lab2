@@ -93,4 +93,45 @@ it works as follows :
 
 ## Whitelist 
    whitelist idea is as follow , we create a file that has the name of all the files that were false positive or restored after detection and deletion so that when scanning again it checks that file first , if the file is in the whitelist then just skip it 
-   
+
+
+## cron job
+ a cron job is basically a scheduled command that the user can control ,it can schedule any shell command , including running a script 
+
+** antivirus-cron.sh -----> the same file as the antivirusd.sh , without the while loop , it runs every scheduled time edited in the crontab 
+
+** how to run:
+
+1- in the terminal run  
+
+  crontab -e 
+
+2- enter the values according to the format
+
+   [minute] [hour] [day of month] [month] [day of week] path && command
+
+3- to get path , write in terminal pwd 
+
+4- command will be in the form:
+
+  bash scriptname parameter parameter (in our case : bash antivirus-cron.sh dir malicious_dir) 
+
+5- ctrl o to save 
+
+6- enter to confirm file 
+
+7-ctrl x to exit corntab editor 
+
+8-to check if it has been saved 
+
+  crontab -l
+
+9-to check if running
+
+  systemctl status cron 
+
+  look for Active:active(running)
+
+
+note: in lab , requirement  is every 1 minute and 23 seconds , no seconds field so we put (sleep 23) in the script 
+
